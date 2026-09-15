@@ -21,13 +21,21 @@ This research proposes **Pre-to-Post Prediction Refinement (P2PR)**, a two-stage
 
 The goal is to improve the trade-off between predictive performance and inference cost.
 
-## Key Contributions
+## My Contributions
 
-- Designed a two-stage multimodal inference framework based on pre-prediction and selective post-prediction.
-- Developed a sample-wise routing mechanism using information available before the expensive prediction path is executed.
-- Introduced pre-assisted post-prediction refinement, allowing information from the inexpensive stage to contribute to the final upgraded prediction.
-- Evaluated multiple routing strategies under a common inference framework.
-- Conducted cost-performance, ablation, statistical significance, and real GPU latency analyses.
+My work focuses on the design and evaluation of **Pre-to-Post Prediction Refinement (P2PR)** on top of established multimodal prediction components.
+
+- **Proposed the P2PR inference framework**, where a low-cost pre-prediction is used both for sample-wise routing and for assisting the final prediction after an upgrade.
+
+- **Designed and implemented a validation-controlled routing pipeline** that determines whether each sample should remain on the low-cost path or be upgraded to a stronger multimodal prediction path.
+
+- **Developed dataset-specific pre-assisted post-prediction refinement**, using controlled refinement strategies for CMU-MOSEI and MM-IMDB.
+
+- **Implemented and evaluated multiple routing strategies** under the same two-stage framework, including learned, confidence-based, random, MLP-based, and attention-based routing.
+
+- **Built a controlled experimental evaluation pipeline** including aligned comparisons with DynMM, post-assist ablations, multi-seed statistical testing, cost-performance analysis, and GPU-synchronized latency measurements.
+
+- **Analyzed the difference between theoretical computation cost and real inference latency**, identifying operating regions where selective routing is beneficial as well as cases where cascade overhead limits practical speedup.
 
 ## Evaluation
 
@@ -39,6 +47,22 @@ The framework was evaluated on two multimodal tasks:
 Experiments compare P2PR with dynamic multimodal inference baselines and alternative routing strategies across different computation budgets.
 
 The results demonstrate that selective routing and prediction refinement can provide useful cost-performance trade-offs, while also highlighting the difference between theoretical operation counts and real execution latency.
+
+## Results
+
+P2PR was evaluated on **CMU-MOSEI** and **MM-IMDB** across multiple computation budgets.
+
+The experiments show that:
+
+- P2PR provides competitive or improved prediction quality compared with the DynMM baseline across the evaluated cost regions.
+- Statistical analyses confirm significant improvements on selected primary metrics.
+- Post-assist ablation experiments show that prediction refinement contributes beyond routing alone.
+- Alternative routing strategies were evaluated under the same two-stage inference framework.
+- GPU-synchronized latency measurements demonstrate that theoretical computation cost (MAdds) does not always translate directly to lower wall-clock latency.
+
+The experiments also identify practical limitations of cascaded inference at high-computation operating points, where routing and sequential execution overhead may reduce or eliminate real-time speed advantages.
+
+Detailed numerical results, tables, and experimental configurations are currently withheld due to the thesis embargo.
 
 ## Research Context
 
