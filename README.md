@@ -4,8 +4,6 @@
 
 Master's thesis research at National Cheng Kung University.
 
-> Source code is currently private due to thesis embargo requirements and third-party code licensing considerations.
-
 ## Overview
 
 Multimodal models often improve prediction quality by combining information from multiple modalities, but executing the full multimodal pipeline for every input can be computationally expensive.
@@ -68,7 +66,7 @@ The experiments show that:
 
 The experiments also identify practical limitations of cascaded inference at high-computation operating points, where routing and sequential execution overhead may reduce or eliminate real-time speed advantages.
 
-Detailed numerical results, tables, and experimental configurations are currently withheld due to the thesis embargo.
+Detailed numerical results, tables, and experimental configurations are not publicly available at this time.
 
 ## Research Context
 
@@ -79,14 +77,10 @@ This work builds upon and extends prior research and implementations including:
 
 The proposed P2PR framework, routing experiments, prediction-refinement methods, evaluation pipelines, ablation studies, statistical analyses, and latency experiments were developed as part of my Master's thesis research.
 
+
 ## Code Availability
 
-The research implementation is currently **not publicly available** due to:
-
-- Thesis publication embargo requirements.
-- Licensing considerations associated with upstream research code.
-
-A cleaned implementation may be released after the embargo period and after confirming the redistribution requirements of the upstream projects.
+The research implementation is not publicly available at this time. Future code release plans will depend on publication arrangements, co-author approval, and applicable third-party licensing requirements.
 
 ## Thesis
 
