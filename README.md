@@ -1,6 +1,6 @@
 # Pre-to-Post Prediction Refinement (P2PR)
 
-**Efficient multimodal inference through sample-wise routing and prediction refinement**
+**A Pre-to-Post Prediction Refinement Approach for Enhancing Multimodal Inference Efficiency**
 
 Master's thesis research at National Cheng Kung University.
 
