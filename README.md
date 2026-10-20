@@ -19,6 +19,14 @@ This research proposes **Pre-to-Post Prediction Refinement (P2PR)**, a two-stage
 
 The goal is to improve the trade-off between predictive performance and inference cost.
 
+
+### Framework Overview
+
+The following diagram illustrates the high-level inference workflow of P2PR, including pre-prediction, sample-wise routing, and optional post-prediction refinement.
+
+![P2PR Framework](images/P2PR_simplified_workflow.png)
+
+
 ## My Contributions
 
 My work focuses on the design and evaluation of **Pre-to-Post Prediction Refinement (P2PR)** on top of established multimodal prediction components.
